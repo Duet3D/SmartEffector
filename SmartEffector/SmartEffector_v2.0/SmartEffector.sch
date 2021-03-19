@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:SmartEffector-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -92,7 +92,7 @@ F 3 "" H 9375 5775 50  0000 C CNN
 	1    0    0    1   
 $EndComp
 $Comp
-L Mechanical:Mounting_Hole M4
+L Mechanical:MountingHole M4
 U 1 1 587CEA49
 P 1660 7005
 F 0 "M4" H 1660 6855 60  0000 C CNN
@@ -103,7 +103,7 @@ F 3 "" H 1660 7005 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Mounting_Hole M5
+L Mechanical:MountingHole M5
 U 1 1 587CF0CA
 P 2160 7005
 F 0 "M5" H 2160 6855 60  0000 C CNN
@@ -114,7 +114,7 @@ F 3 "" H 2160 7005 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Mounting_Hole M6
+L Mechanical:MountingHole M6
 U 1 1 587CF116
 P 2610 7005
 F 0 "M6" H 2610 6855 60  0000 C CNN
@@ -125,7 +125,7 @@ F 3 "" H 2610 7005 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Mounting_Hole M7
+L Mechanical:MountingHole M7
 U 1 1 587CF163
 P 3060 7005
 F 0 "M7" H 3060 6855 60  0000 C CNN
@@ -136,7 +136,7 @@ F 3 "" H 3060 7005 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Mounting_Hole M8
+L Mechanical:MountingHole M8
 U 1 1 587CF1AF
 P 3510 7005
 F 0 "M8" H 3510 6855 60  0000 C CNN
@@ -147,7 +147,7 @@ F 3 "" H 3510 7005 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Mounting_Hole M3
+L Mechanical:MountingHole M3
 U 1 1 587CF200
 P 1210 7005
 F 0 "M3" H 1210 6855 60  0000 C CNN
@@ -158,7 +158,7 @@ F 3 "" H 1210 7005 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart:FID M1
+L Mechanical:Fiducial M1
 U 1 1 587CF312
 P 1400 7515
 F 0 "M1" H 1400 7365 60  0000 C CNN
@@ -169,7 +169,7 @@ F 3 "" H 1400 7515 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart:FID M2
+L Mechanical:Fiducial M2
 U 1 1 587CF390
 P 1650 7515
 F 0 "M2" H 1650 7365 60  0000 C CNN
@@ -359,7 +359,7 @@ $EndComp
 Text Notes 2150 2525 0    60   ~ 0
 Heater and Fan\npass through
 $Comp
-L Mechanical:Mounting_Hole M13
+L Mechanical:MountingHole M13
 U 1 1 587E7263
 P 3010 7505
 F 0 "M13" H 3010 7355 60  0000 C CNN
@@ -405,6 +405,17 @@ F 2 "complib:R_0603" H 10075 5625 50  0001 C CNN
 F 3 "" H 10075 5625 50  0000 C CNN
 	1    10075 5625
 	-1   0    0    1   
+$EndComp
+$Comp
+L Duet3:Duet3D_Logo M15
+U 1 1 587ED2EE
+P 810 7485
+F 0 "M15" H 810 7335 60  0000 C CNN
+F 1 "Duet3D Logo" H 810 7635 60  0000 C CNN
+F 2 "complib:LOGO_Duet3dCompatible" H 810 7485 60  0001 C CNN
+F 3 "" H 810 7485 60  0000 C CNN
+	1    810  7485
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:LED_Small D1
@@ -568,7 +579,7 @@ $EndComp
 Text GLabel 6675 2375 2    60   Input ~ 0
 T
 $Comp
-L smart:FID M16
+L Mechanical:MountingHole M16
 U 1 1 5897DC47
 P 2050 7515
 F 0 "M16" H 2050 7365 60  0000 C CNN
@@ -601,7 +612,7 @@ F 3 "" H 6075 1575 50  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L smart:MCP6286 U3
+L Amplifier_Operational:MCP6286 U3
 U 1 1 58D2A7FE
 P 8550 1775
 F 0 "U3" H 8550 1925 60  0000 C CNN
@@ -627,7 +638,7 @@ L Device:C_Small C6
 U 1 1 58961D23
 P 8670 2425
 F 0 "C6" V 8770 2425 50  0000 L CNN
-F 1 "22u<20%" V 8560 2245 50  0000 L CNN
+F 1 "22u" V 8560 2245 50  0000 L CNN
 F 2 "complib:C_0805" H 8670 2425 50  0001 C CNN
 F 3 "" H 8670 2425 50  0000 C CNN
 	1    8670 2425
@@ -815,18 +826,7 @@ Wire Wire Line
 	1950 3325 1250 3325
 Connection ~ 1950 3225
 $Comp
-L Mechanical:Mounting_Hole M11
-U 1 1 59524255
-P 2380 6425
-F 0 "M11" H 2380 6275 60  0000 C CNN
-F 1 "M_2.9mm" H 2380 6575 60  0000 C CNN
-F 2 "complib:MountingHole_2.9mm" H 2380 6425 60  0001 C CNN
-F 3 "" H 2380 6425 60  0000 C CNN
-	1    2380 6425
-	1    0    0    -1  
-$EndComp
-$Comp
-L Mechanical:Mounting_Hole M9
+L Mechanical:MountingHole M9
 U 1 1 59524330
 P 2870 6415
 F 0 "M9" H 2870 6265 60  0000 C CNN
@@ -837,7 +837,7 @@ F 3 "" H 2870 6415 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Mechanical:Mounting_Hole M10
+L Mechanical:MountingHole M10
 U 1 1 595243F8
 P 3370 6415
 F 0 "M10" H 3370 6265 60  0000 C CNN
@@ -880,11 +880,11 @@ Wire Wire Line
 Wire Wire Line
 	1950 3225 2900 3225
 $Comp
-L MCU_Microchip_ATtiny:ATtiny44A-MMH-PAD U2
+L SmartEffector-rescue:ATtiny44A-MMH-PAD-MCU_Microchip_ATtiny U2
 U 1 1 5BC6AD32
 P 9050 3775
 F 0 "U2" H 8171 3821 50  0000 R CNN
-F 1 "ATtiny44A-MMH-PAD" H 9425 3750 50  0000 R CNN
+F 1 "ATtiny44A-MUR" H 9425 3750 50  0000 R CNN
 F 2 "complib:QFN-20-1EP_4x4mm_Pitch0.5mm" H 9050 3775 50  0001 C CIN
 F 3 "" H 9050 3775 50  0001 C CNN
 	1    9050 3775
@@ -953,13 +953,7 @@ Wire Wire Line
 Wire Wire Line
 	6600 1650 6600 1475
 Connection ~ 6600 1650
-Wire Wire Line
-	5425 1250 4875 1250
 Connection ~ 5425 1250
-Wire Wire Line
-	4925 1625 4925 1550
-Wire Wire Line
-	4925 1550 4875 1550
 Wire Wire Line
 	4925 1825 4925 1925
 Wire Wire Line
@@ -967,32 +961,18 @@ Wire Wire Line
 Wire Wire Line
 	4400 1925 4400 1950
 Wire Wire Line
-	4400 1925 4400 1400
-Wire Wire Line
-	4400 1400 3875 1400
-Connection ~ 4400 1925
-Wire Wire Line
-	3875 1550 3825 1550
-Wire Wire Line
-	3825 1550 3825 1250
-Wire Wire Line
-	3875 1250 3825 1250
-Wire Wire Line
-	3825 1250 3825 775 
-Wire Wire Line
 	3825 775  9050 775 
-Connection ~ 3825 1250
 Wire Wire Line
 	9050 775  9050 885 
 $Comp
-L smart:LDK130M08 U1
+L Regulator_Linear:LDK130-10_SOT23_SOT353 U1
 U 1 1 58D58578
-P 4375 1400
-F 0 "U1" H 4375 1550 60  0000 C CNN
-F 1 "LDK130M10" H 4360 1735 60  0000 C CNN
-F 2 "complib:SOT-23-5L" H 4375 1400 60  0001 C CNN
-F 3 "" H 4375 1400 60  0000 C CNN
-	1    4375 1400
+P 4375 1350
+F 0 "U1" H 4375 1500 60  0000 C CNN
+F 1 "LDK130M10" H 4360 1685 60  0000 C CNN
+F 2 "complib:SOT-23-5L" H 4375 1350 60  0001 C CNN
+F 3 "" H 4375 1350 60  0000 C CNN
+	1    4375 1350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1382,4 +1362,35 @@ Wire Wire Line
 	10725 6125 10725 6075
 Wire Wire Line
 	10725 6075 10600 6075
+$Comp
+L Mechanical:MountingHole M11
+U 1 1 59524255
+P 2380 6425
+F 0 "M11" H 2380 6275 60  0000 C CNN
+F 1 "M_2.9mm" H 2380 6575 60  0000 C CNN
+F 2 "complib:MountingHole_2.9mm" H 2380 6425 60  0001 C CNN
+F 3 "" H 2380 6425 60  0000 C CNN
+	1    2380 6425
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4400 1925 4375 1925
+Wire Wire Line
+	4375 1925 4375 1650
+Connection ~ 4400 1925
+Wire Wire Line
+	4075 1350 3825 1350
+Wire Wire Line
+	3825 775  3825 1250
+Wire Wire Line
+	4075 1250 3825 1250
+Connection ~ 3825 1250
+Wire Wire Line
+	3825 1250 3825 1350
+Wire Wire Line
+	4925 1350 4675 1350
+Wire Wire Line
+	4925 1350 4925 1625
+Wire Wire Line
+	4675 1250 5425 1250
 $EndSCHEMATC
